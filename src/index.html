@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Galindo&display=swap"
+        rel="stylesheet" />
+    <title>Rock-Paper-Scissors</title>
+</head>
+
+<body
+    class="bg-gradient-to-r from-blue-950 via-red-900 to-blue-950 flex flex-col justify-center items-center h-screen text-white font-bold">
+    <!-- HEADER SECTION -->
+    <div class="flex items-center w-[50rem] mb-10">
+        <h1 class="mb-16 mt-10 text-6xl text-yellow-400 text-center flex-auto">ROCK PAPER SCISSORS</h1>
+    </div>
+    <!-- SCORE SECTION -->
+    <section
+        id="score"
+        class="w-[45rem] mb-10 hidden items-center justify-center bg-blue-900/50 rounded-xl text-5xl py-3 space-x-32 text-yellow-400">
+        <div class="flex flex-col items-center">
+            <p class="text-emerald-600" id="player--0">YOU</p>
+            <p id="score-player"></p>
+        </div>
+        <p class="text-4xl">VS</p>
+        <div class="flex flex-col items-center">
+            <p class="text-red-700" id="player--1">ENEMY</p>
+            <p id="score-enemy"></p>
+        </div>
+    </section>
+
+    <!-- MAIN SECTION -->
+    <main class="bg-white/5 w-[55rem] h-[30rem] rounded-xl mb-10">
+        <button id="btn-reload"
+            class="bg-blue-900/70 w-14 h-14 hidden justify-center items-center rounded-xl select-none hover:bg-blue-900 active:bg-blue-950 transition duration-150 ">
+            <img class="w-8 h-8" src="/assets/reload.svg" alt="realod">
+        </button>
+        <div id="start" class="text-7xl flex justify-center items-center h-full text-yellow-400">START</div>
+        <section id="game" class="justify-between m-20 items-center hidden">
+            <div class="flex flex-col space-y-3 items-center text-blue-300 text-2xl ">
+                <h1>YOU PICKED</h1>
+                <img id="item-player" src="/assets/rock.svg" alt="rock"
+                    class="pointer-events-none select-none w-44 h-44">
+            </div>
+            <div id="result" class="text-6xl"></div>
+            <div class="flex flex-col space-y-3 items-center text-blue-300 text-2xl ">
+                <h1>ENEMY PICKED</h1>
+                <img id="item-enemy" src="/assets/paper.svg" alt="rock"
+                    class="pointer-events-none select-none w-44 h-44">
+            </div>
+        </section>
+    </main>
+    <!-- CHOICE SECTION -->
+    <section class="flex justify-center items-center space-x-12">
+        <button id="btn-rock"
+            class="flex flex-col items-center justify-center space-y-3 bg-red-950 w-36 h-36 rounded-xl cursor-pointer hover:scale-105 active:bg-pink-950 transition duration-150">
+            <img src="/assets/rock.svg" alt="rock" class="pointer-events-none select-none w-24 h-24">
+        </button>
+        <button id="btn-paper"
+            class="flex flex-col items-center justify-center space-y-3 bg-red-950 w-36 h-36 rounded-xl cursor-pointer hover:scale-105 active:bg-pink-950 transition duration-150">
+            <img src="/assets/paper.svg" alt="rock" class="pointer-events-none select-none w-24 h-24">
+        </button>
+        <button id="btn-scissors"
+            class="flex flex-col items-center justify-center space-y-3 bg-red-950 w-36 h h-36 rounded-xl cursor-pointer hover:scale-105 active:bg-pink-950 transition duration-150">
+            <img src="/assets/scissors.svg" alt="rock"
+                class="pointer-events-none select-none w-24 h-24">
+        </button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
